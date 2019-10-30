@@ -1,0 +1,20 @@
+// Greenfield, a new from-scratch GTK stylesheet
+
+@use 'palette' as *;
+
+@mixin view {
+    background: $SILVER_100;
+    color: $BLACK_700;
+}
+
+window,
+dialog,
+messagedialog,
+menu,
+popover,
+.titlebar,
+.background,
+.csd {
+    @include view;
+}
+
