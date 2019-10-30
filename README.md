@@ -17,7 +17,7 @@ To be read/used, but not to be changed by the application.
 
 ### Theming API
 
-To be set by an application to get certain branding/theming capabilities
+To be used and/or set by an application to get certain branding/theming capabilities
 
 - accent color (and contrasting color?)
 - headerbar colors (bg and fg)
