@@ -2,6 +2,10 @@
 
 An experiment in GTK Stylesheets
 
+## Building
+
+Desparately in need of a meson build system. Requires `dart-sass`` or some sort of `sass` with support for `@use`.
+
 ## Exported variables (public API)
 
 ### Constants
