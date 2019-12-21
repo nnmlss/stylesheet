@@ -1666,11 +1666,11 @@ notebook header {
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                #fff,
                 0.1
             ),
             alpha (
-                #000,
+                #fff,
                 0
             ) 3px
         ),
@@ -1678,16 +1678,16 @@ notebook header {
             to bottom,
             shade (
                 @titlebar_color,
-                0.91
+                1.04
             ),
             shade (
                 @titlebar_color,
-                0.96
+                1.12
             )
         );
     border-style: solid;
     border-width: 0 0 1px;
-    border-color: shade (@titlebar_color, 0.62);
+    border-color: shade (@titlebar_color, 0.92);
     border-radius: 0;
 }
 
@@ -1713,7 +1713,7 @@ notebook header button {
 }
 
 .header separator.vertical {
-    border-right-color: alpha (#fff, 0.2);
+    border-right-color: alpha (#fff, 0.9);
 }
 
 notebook image {
@@ -1763,16 +1763,16 @@ notebook tab:checked {
             to bottom,
             shade (
                 @titlebar_color,
-                0.94
+                1.94
             ),
             shade (
                 @titlebar_color,
-                0.9
+                1.9
             )
         );
-    border-color: shade (@titlebar_color, 0.62);
+    border-color: shade (@titlebar_color, 1.2);
     border-image: none;
-    border-radius: 4px 4px 0 0;
+    border-radius: 2px 2px 0 0;
     border-style: solid;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
@@ -2154,6 +2154,7 @@ switch {
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: transparent;
     font-size: 0.1px;
+    margin: 5px;
 }
 
 /* FIXME: treeview .cell needs to be more specific to avoid this */
@@ -2202,7 +2203,7 @@ switch:checked {
             to bottom,
             alpha (
                 #fff,
-                0.3
+                0.1
             ),
             alpha (
                 #fff,
@@ -2329,20 +2330,20 @@ switch slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade(@SILVER_100, 1.05),
-            shade(@SILVER_100, 0.95)
+            shade(@theme_bg_color, 1.05),
+            shade(@theme_bg_color, 0.95)
         );
     border: 1px solid alpha(#000, 0.2);
     border-radius: 50%;
     box-shadow:
         inset 0 0 0 1px alpha(#fff, 0.05),
-        inset 0 1px 0 0 alpha(#fff, 0.45),
+        inset 0 1px 0 0 alpha(#fff, 0.05),
         inset 0 -1px 0 0 alpha(#fff, 0.15),
         0 1px 1px alpha(#000, 0.15),
         0 1px 2px alpha(#000, 0.16);
-    margin: -1px;
-    min-height: 24px;
-    min-width: 24px;
+    margin: 2px;
+    min-height: 13px;
+    min-width: 13px;
 }
 
 switch slider:disabled,
@@ -3391,7 +3392,7 @@ row:selected:focus image {
 .sidebar list,
 .source-list,
 .source-list.view {
-    background-color: shade (@bg_color, 0.92);
+    background-color: shade (@bg_color, 0.98);
     color: mix (@bg_color, @text_color, 0.77);
     -gtk-icon-style: regular;
     -GtkTreeView-horizontal-separator: 1px;
@@ -3883,10 +3884,10 @@ GcrCertificateWidget .frame {
             ),
             shade (
                 @colorPrimary,
-                0.94
+                1.4
             )
         );
-    border-color: shade (@colorPrimary, 0.68);
+    border-color: shade (@colorPrimary, 0.98);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
@@ -3894,7 +3895,7 @@ GcrCertificateWidget .frame {
     box-shadow:
         inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.2),
         inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6);
-    padding: 8px 6px 6px;
+    padding: 4px 6px;
     -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
 }
 
@@ -3908,7 +3909,7 @@ GcrCertificateWidget .frame {
             ),
             shade (
                 @colorPrimary,
-                1.04
+                1.09
             )
         );
     background-color: shade (@colorPrimary, 1.1);
