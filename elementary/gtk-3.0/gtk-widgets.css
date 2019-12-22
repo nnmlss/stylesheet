@@ -327,7 +327,7 @@ spinbutton,
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: @text_color;
     text-shadow: 0 1px @text_shadow_color;
-    padding: 3px;
+    padding: 3px 7px;
     transition: all 200ms ease-out;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
