@@ -20,7 +20,7 @@
 @import url("brand-dark.css");
 
 /* Default color scheme */
-@define-color base_color #3E4752; /* mix(@BLACK_500, @BLACK_300, 0.5); */
+@define-color base_color mix (@SLATE_700, @SILVER_900, 0.333); /* #3E4752 mix(@BLACK_500, @BLACK_300, 0.5); */
 @define-color bg_color shade (@base_color, 0.96);
 @define-color bg_highlight_color shade (@bg_color, 1.4);
 @define-color border_color alpha (@BLACK_900, 0.25);
@@ -31,7 +31,7 @@
 @define-color menu_separator alpha (@BLACK_900, 0.25);
 @define-color menu_separator_shadow alpha (#fff, 0.05);
 @define-color placeholder_text_color shade(@text_color, 0.8);
-@define-color selected_bg_color #AB076F; /* B94179 shade (@BLUEBERRY_300, 0.85); */
+@define-color selected_bg_color shade ( mix (@BLUEBERRY_900, @STRAWBERRY_500, 0.65), 1.23); /* #AB076F #B94179 shade (@BLUEBERRY_300, 0.85); */
 @define-color selected_fg_color #fff;
 @define-color text_color @SILVER_100;
 @define-color text_shadow_color alpha (@BLACK_900, 0.4);
@@ -48,8 +48,8 @@
 
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
-@define-color attention_color #B94179; /* @BLUEBERRY_500; */
-@define-color link_color #B94179; /* @BLUEBERRY_500; */
+@define-color attention_color shade (@selected_bg_color, 1.3); /* @BLUEBERRY_500; */
+@define-color link_color shade (@selected_bg_color, 1.9); /* @BLUEBERRY_500; */
 @define-color warning_color @BANANA_500;
 @define-color error_color @STRAWBERRY_500;
 @define-color success_color @LIME_300;
