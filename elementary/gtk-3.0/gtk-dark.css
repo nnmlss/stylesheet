@@ -35,7 +35,7 @@
 @define-color selected_fg_color #fff;
 @define-color text_color @SILVER_100;
 @define-color text_shadow_color alpha (@BLACK_900, 0.4);
-@define-color titlebar_color shade (@base_color, 0.9);
+@define-color titlebar_color shade (@base_color, 1.04);
 @define-color title_color shade (@text_color, 0.9);
 @define-color title_shadow_color alpha (@BLACK_900, 0.6);
 @define-color tooltip_bg_color @BLACK_900;
