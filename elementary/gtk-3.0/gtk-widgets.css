@@ -4052,6 +4052,29 @@ messagedialog .titlebar.default-decoration:backdrop {
     -gtk-icon-shadow: none;
 }
 
+/********************
+* Headerbar buttons *
+********************/
+
+headerbar.titlebar button.titlebutton {
+    /*  background: shade (@base_color, 1.5);
+     border: 1px solid shade(@base_color, 1); */
+    border-radius: 50%;
+}
+
+headerbar.titlebar button.titlebutton:hover {
+    border-color: shade (@base_color, 0.76);
+    box-shadow:
+        0 0 4px shade (@base_color, 1),
+        inset 2px 2px 1px @base_color;
+    background: shade (@base_color, 1);
+}
+
+.reorderable-page .flat.image-button:hover image,
+.titlebar .titlebutton.close:hover image {
+    color: shade (@error_color, 1.3);
+}
+
 decoration {
     border-radius: 4px 4px 0 0;
     box-shadow:
