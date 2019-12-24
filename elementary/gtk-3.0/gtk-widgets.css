@@ -1997,7 +1997,7 @@ window.popup {
 menubar,
 .menubar {
     color: @text_color;
-    background-color: shade (@titlebar_color, 0.94);
+    background-color: shade (@titlebar_color, 0.98);
     border: 1px solid shade (@titlebar_color, 0.68);
     border-width: 0 0 1px;
     box-shadow:
@@ -3196,11 +3196,11 @@ column-header .button {
     background-image:
         linear-gradient(
             to bottom,
+            @base_color,
             shade (
                 @base_color,
-                0.88
-            ),
-            @base_color
+                0.92
+            )
         );
     font-weight: bold;
     padding: 4px 2px;
@@ -3216,11 +3216,11 @@ column-header .button:hover {
     background-image:
         linear-gradient(
             to bottom,
+            @base_color,
             shade (
                 @base_color,
-                0.8
-            ),
-            @base_color
+                0.95
+            )
         );
 }
 

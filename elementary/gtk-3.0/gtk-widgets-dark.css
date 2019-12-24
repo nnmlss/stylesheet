@@ -55,12 +55,12 @@ entry,
 
 entry:focus,
 .entry:focus {
-    border-color: shade (@colorAccent, .9);
+    border-color: shade (@colorAccent, 0.9);
     box-shadow:
-        inset 0 0 0 1px shade (@colorAccent, .9),
+        inset 0 0 0 1px alpha (@colorAccent, 0.1),
         inset 0 1px 0 0 alpha(@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
-        0 0 0 1px  shade (@colorAccent, .9);
+        0 1px 0 0  alpha (#fff, 0.05);
 }
 
 entry selection,
@@ -146,11 +146,12 @@ notebook header {
         );
 }
 
-/* notebook tab:checked {
-    box-shadow:
+notebook tab:checked {
+    box-shadow:0 1px 0 @base_color;
+   /* box-shadow:
         inset 0 1px 0 1px alpha (@bg_highlight_color, 0.2),
-        0 -1px 0 1px alpha (#000, 0.1);
-} */
+        0 -1px 0 1px alpha (#000, 0.1);*/
+} 
 
 /********
 * Scale *
@@ -345,6 +346,18 @@ modelbutton .keycap {
     background: alpha (#000, 0.15);
     box-shadow: 0 1px 0 0 alpha (#000, 0.25);
     color: alpha(@text_color, 0.75);
+}
+
+menubar,
+.menubar {
+    color: @text_color;
+    background-color: shade (@titlebar_color, 0.98);
+    border: 1px solid shade (@titlebar_color, 0.68);
+    border-width: 0 0 1px;
+    box-shadow:
+        inset 0 0 0 21px alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+    -GtkWidget-window-dragging: true;
 }
 
 /***********
