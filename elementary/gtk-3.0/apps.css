@@ -233,7 +233,7 @@ paned statusbar frame {
 .terminal-window notebook header.top tabs tab:checked {
     background: alpha (@terminalTabColor, 0.55);
     margin: 2px 0 -1px;
-    border-width: 1px 1px 0 solid;
+    border-width: 1px 1px 0;
     border-radius: 7px 7px 0 0;
     border-color: shade (@terminalTabColor, 1.1 );
     box-shadow:
@@ -241,7 +241,7 @@ paned statusbar frame {
         0 -2px 2px alpha (@selected_fg_color, 0.3);
 }
 
-/* .terminal-window.fullscreen header.top tabs tab:checked, */t
+/* .terminal-window.fullscreen header.top tabs tab:checked, */
 .terminal-window.maximized header.top tabs tab:checked {
     background: @terminalTabColor;
 }
@@ -261,7 +261,6 @@ paned statusbar frame {
 }
 
 .menubar.background.panel button.flat:hover {
-    cursor: pointer;
     background-color: alpha (@base_color, 0.5);
     border: 1px solid shade (@base_color, 1.3);
     box-shadow: 0 0 2px shade (@base_color, 0.5);
