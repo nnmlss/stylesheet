@@ -333,8 +333,8 @@ spinbutton,
 }
 
 selection {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
+    background-color: alpha (@accent_color_100, 0.3);
+    color: @accent_color_900;
     text-shadow: none;
 }
 
@@ -2356,6 +2356,26 @@ switch slider:backdrop {
         0 1px 1px alpha (#000, 0.15);
 }
 
+radiobutton.image-button {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+radiobutton.image-button:checked:not(:backdrop) {
+    background-color: alpha (@colorAccent, 0.1);
+    border-color: @colorAccent;
+}
+
+radiobutton.image-button:checked:not(:backdrop) image {
+    color: mix (@colorAccent, @text_color, 0.3);
+}
+
+radiobutton.image-button:checked:backdrop {
+    background-color: alpha (@text_color, 0.05);
+    border-color: alpha (@text_color, 0.4);
+}
+
 /***********
 * Toolbars *
 ***********/
@@ -4187,6 +4207,10 @@ dialog notebook,
 dialog toolbar {
     background-image: none;
     background-color: @bg_color;
+}
+
+.dialog-action-area button > * {
+    min-height: calc(1em + 7px);
 }
 
 /***************
